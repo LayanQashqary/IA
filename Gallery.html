@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/GalleryStyle.css">
+</head>
+<body> 
+    <header>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="workout.html">Workout</a></li>   
+        <li><a href="CalculateCalories.html">BMI</a></li>
+        <li><a href="Recipes.html">Recipes</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="Subscription.html">Subscription</a></li>
+        <li><a href="basket.html">Basket</a></li>
+      </ul>
+    </nav>
+  </header>
+    <div class="container">
+        <h1 class="gallery_title"align="center">Share photos of your order with us</h1>
+        <div class="button_center">
+            <input type="file" id="upload_photos_button" onclick="uploadFile()">
+        <label class="add_p_label" for="upload_photos_button">Add photo</label>
+        </div>
+        <div class="photo_gallery">
+            <div class="column">
+                 <div class="photo">
+                    <img src="https://i.pinimg.com/564x/12/bf/15/12bf151902c86676b4f6331d8918d2a4.jpg" >
+                </div>
+                 <div class="photo">
+                    <img src="https://i.pinimg.com/564x/08/67/5b/08675b01013808c5a4b22e1f4e9576b8.jpg" >
+                </div>
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/8f/25/e2/8f25e24dca50cc49b2eb5a21d559f4f7.jpg">
+                </div>
+                 <div class="photo">
+                    <img src="https://i.pinimg.com/564x/89/9c/f0/899cf0d75e041cf6541d29f77432f24a.jpg">
+                </div>
+            </div><! --1st column--> 
+            <div class="column">
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/da/f4/7d/daf47d45ae4a8d9f69ae3039f56e2362.jpg" >
+                </div>
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/7f/b9/72/7fb972673ce73ffae64f9f4847e5b0ef.jpg" >
+                </div>
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/2b/b7/62/2bb76231b17bda632a51056c66447ac8.jpg" >
+                </div>
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/fb/9c/a0/fb9ca02237200ed1eae340e07a42c98c.jpg">
+                </div>
+                <div class="photo">
+                    <img src="https://i.pinimg.com/736x/48/d9/7e/48d97e3e430693283e2701ae3fe7c7a3.jpg">
+                </div>
+            </div><! --2nd column--> 
+            <div class="column">
+                          <div class="photo">
+                    <img src="https://i.pinimg.com/564x/77/3a/de/773adeff6dcbf67db3f04000be95d683.jpg" >
+                </div>
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/e0/5f/ca/e05fcaba8ea838d194b84854a01137c4.jpg">
+                </div>
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/05/49/10/0549104e7cb46bf617a5d2a014eee995.jpg">
+                </div>
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/9b/cb/75/9bcb751073cce68ab88b68dc22e2645c.jpg">
+                </div>
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/a3/22/0a/a3220a7c52cf5162a4bb4d54b6eca030.jpg" >
+                </div>
+
+            </div><!--3rd column-->
+            <div class="column">
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/ae/fd/fb/aefdfba6a38f617c6038f762fbe30cbd.jpg" >
+                </div>
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/4b/03/a4/4b03a4abd86c5e9fca185704c34d46c6.jpg" >
+                </div>
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/c9/a3/ed/c9a3ed58d5f15f7d3411a822cdc52632.jpg" >
+                </div>
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/84/72/5b/84725b5bcc7fab3ae672b798f88ec26d.jpg">
+                </div>
+                <div class="photo">
+                    <img src="https://i.pinimg.com/564x/06/bc/9f/06bc9f9d744c3f6e0888e694eb37bdac.jpg">
+                </div>
+            </div>
+        </div><! --photo gallery--> 
+    </div><! --container--> 
+        <footer>
+    <p>&copy; 2023 Healthy Meals and Products. All rights reserved.</p>
+  </footer>
+  <script type="text/javascript">
+    function uploadFile() {
+  const fileInput = document.getElementById('upload_photos_button');
+  // Check if a file was selected
+  if (fileInput.files.length == 0) {
+    alert('Please select a photo to upload');
+    return;
+  }
+  // Show a thank you message
+      alert('Thank you for sharing.');
+}
+</script>
+</body>
+<html>

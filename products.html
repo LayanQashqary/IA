@@ -1,0 +1,119 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Products</title>
+        <link rel="stylesheet" href="css/homepageStyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+        <link rel="stylesheet" href="css/products.css">
+    </head>
+    <body>
+        <header>
+        <nav>
+        <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="workout.html">Workout</a></li>   
+        <li><a href="CalculateCalories.html">BMI</a></li>
+        <li><a href="Recipes.html">Recipes</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="Subscription.html">Subscription</a></li>
+        <li><a href="basket.html">Basket</a></li>
+        </ul>
+        </nav>
+    </header>
+    <section class="getMeals">
+        <h1>Products</h1>
+        <div id="product-list">
+            <!-- Product Cards will be dynamically added here -->
+            
+
+          </div>
+    </section>
+  
+    
+    
+        <script>
+            var products = [
+      {
+        image: "images/protinebar.png", 
+        name: "  KIND protine bar",
+        description: "Peanut Butter protine bar",
+        price: 4,
+        ingredients: "Peanut Butter - Nuts - honey - protine",
+        calories: "200 calories "
+      },
+      {
+        image: "images/fitness.png",
+        name: "Fitness Snack",
+        description: "Fitness granola snack",
+        price: 2,
+        ingredients: "oats - honey - chocolate ",
+        calories: "200 calories "
+      },
+      {
+        image: "images/greekyougart1.png",
+        name: " greek yougart",
+        description: "yougart",
+        price: 3,
+        ingredients: "",
+        calories: " 60 calories"
+      },
+      {
+        image: "images/oats.png",
+        name: "Quaker oats ",
+        description: "oats ",
+        price: 15,
+        ingredients: "oatmeal",
+        calories: "100 gram = 389 calories"
+      },
+      {
+        image: "images/bread.png",
+        name: "bran bread Toast",
+        description: "bran flour Toast",
+        price:10,
+        ingredients: "bran flour",
+        calories: "30 gram : 73 calories"
+      },
+      {
+        image: "images/crunchysnack.png",
+        name: " nature valley crunchy sanck",
+        description: "crunchy sanck",
+        price: 5,
+        ingredients: "nuts - oats - honey",
+        calories: " 155 calories"
+      },
+      
+      // Add more product objects as needed
+    ];
+
+    // Function to generate product cards dynamically
+    function generateProductCards() {
+      var productContainer = document.getElementById("product-list");
+
+      for (var i = 0; i < products.length; i++) {
+        var card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+        <img src="./${products[i].image}" alt="Product Image">
+              <h3 class="product-name">${products[i].name}</h3>
+              <p class="product-description">${products[i].description}</p>
+              <p class="product-ingredients">${products[i].ingredients}</p>
+              <p class="product-calories">${products[i].calories}</p>
+              <p class="product-price">${products[i].price} $</p>
+              <button class="add-to-cart"> <i class="fas fa-shopping-cart"></i> Add to Cart</button>
+        `;
+        productContainer.appendChild(card);
+      }
+    }
+
+    // Generate product cards when the page loads
+    window.onload = generateProductCards;
+        </script>
+    </body>
+    </html>

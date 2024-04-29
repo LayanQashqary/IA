@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Subscription</title>
+    <link rel="stylesheet" href="css/SubscriptionStyle.css">
+</head>
+<body>
+    <header>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="workout.html">Workout</a></li>   
+        <li><a href="CalculateCalories.html">BMI</a></li>
+        <li><a href="Recipes.html">Recipes</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="Subscription.html">Subscription</a></li>
+        <li><a href="basket.html">Basket</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+        <h1 class="getMeals">Subscribtion</h1>
+    
+  <main>
+<div class="container" id="container">
+<div class="form-container veg-container">
+
+<form action="#" method="GET" id="formv">
+    <div class="personal-info-container">
+        <input type="text" id="n" name="name" placeholder="Enter your name" required>
+        <input type="text" id="p" name="phoneNo" placeholder="Enter your phone number" required>
+        <input type="email" id="e" name="email" placeholder="Enter your email" required>
+    </div>
+    <span>Chose how would you like your subscription plan</span>
+    <br>
+    <div class="radioButton_container">
+    <input class="radio_input" type="radio" name="subscription_plan" value="monthly"id="monthly" >
+    <label class="radio_label" for="monthly">Monthly</label><br>
+    <input class="radio_input" type="radio" name="subscription_plan" value="weekly" id="weekly" >
+    <label class="radio_label" for="weekly">Weekly</label>
+    </div>
+    <br>
+    <span>Chose the subscription start date</span>
+    <input type="date" id="d" name="start_date" placeholder="start date" required>
+    <a href="https://www.webmd.com/diet/vegan-diet-overview" target="_blank">Click to here learn more about this life style</a>
+    <button id="subButton_v" onclick="checkForm('formv')">subscribe</button>
+</form>
+</div>
+<div class="form-container non-veg-container">
+    <form action="#" method="GET" id="formnv">
+        <div class="personal-info-container">
+        <span>Fill your information</span>
+        <input type="text" id="n2" name="name" placeholder="Enter your name" required>
+        <input type="text" id="p2" name="phoneNo" placeholder="Enter your phone number" required>
+        <input type="email" id="e2" name="email" placeholder="Enter your email" required>
+    </div>
+    <span>Chose how would you like your subscription plan</span>
+    <br>
+    <div class="radioButton_container">
+    <input class="radio_input" type="radio" name="subscription_plan" value="monthly"id="monthly2" >
+    <label class="radio_label" for="monthly">Monthly</label><br>
+    <input class="radio_input" type="radio" name="subscription_plan" value="weekly"id="weekly2" >
+    <label class="radio_label" for="weekly">Weekly</label>
+    </div>
+    <br>
+    <span>Chose the subscription start date</span>
+    <input type="date" id="d2" name="start_date" placeholder="start date" required>
+    
+    <button id="subButton_nv" onclick="checkForm('formnv')">subscribe</button>
+    </form>
+</div>
+<div class="overlay-container">
+    <div class="overlay">
+        <div class="overlay-panel overlay-left">
+            <h1>Non-Vegan!</h1>
+            <p>Super healthy meals with delicious desserts...</p>
+            <button class="ghost" id="non_v_b">Non vegan subscription</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+            <h1>Go Vegan!</h1>
+            <p>Healthy meals that...</p>
+            <table>
+                <tr>
+                    <th>Don't contain</th>
+                    <th>Contain</th>
+                </tr>
+                <tr>
+                    <th>meat</th>
+                    <th>Fruits</th>
+                </tr>
+                <tr>
+                    <th>poultry</th>
+                    <th>vegetables</th>
+                </tr>
+                <tr>
+                    <th>fish</th>
+                    <th>Nuts</th>
+                </tr>
+                <tr>
+                    <th>eggs</th>
+                    <th>seeds</th>
+                </tr>
+                <tr>
+                    <th>Dairy</th>
+                    <th>Legumes</th>
+                </tr>
+            </table>
+            <br>
+            <button class="ghost" id="v_b">vegan subscription</button>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+    const VegButton = document.getElementById('v_b');
+    const nonVegButton = document.getElementById('non_v_b');
+    const container = document.getElementById('container');
+
+    VegButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+    nonVegButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+  function checkForm(formId) {
+  var form = document.getElementById(formId);
+  var inputs = form.getElementsByTagName('input');
+  var filled = true;
+  
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].type === 'text' && inputs[i].value === '') {
+      filled = false;
+      break;
+    }
+  }
+  if (filled) {
+    alert('Your order is almost complete! Please proceed to the basket to finalize the payment process');
+  } else {
+    alert('Please fill in all fields.');
+  }
+}
+</script>
+</main>
+<footer>
+    <p>&copy; 2023 Healthy Meals and Products. All rights reserved.</p>
+  </footer>
+</body>
+</html>

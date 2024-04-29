@@ -1,0 +1,107 @@
+
+body{
+  background-image: ;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  max-height: 500px;
+  margin: auto;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+.facts {
+  color: green;
+  font-size: 22px;
+}
+
+
+img {
+  border-radius: 50%;
+
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to
+ demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 500px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+/*The flip animation*/
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /*hides the faces from each other*/
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: rgba(250,250,250,0.3);
+  color: black; /*text color in the front*/
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgba(250,250,250,0.9);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
+  color: #333;
+  transform: rotateY(180deg);
+}
+
+/*Table styling*/
+table{
+  margin:auto;
+}
+
+tr:hover {background-color: #CFE1B9;}
+
+/*horizntal divider*/
+th, td {
+  border-bottom: 2px solid #ddd;
+  padding: 7px;
+  text-align: center;
+}
+
+/*List paragraph*/
+p {
+  font-size: 1rem;
+  background-color: rgba(250, 250, 250, 0.5);
+  margin-bottom: 2rem;
+}
+
+a#direct {
+  background-color: #B5C99A;
+  color: white;
+  padding: 14px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+

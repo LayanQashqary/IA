@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css\homepageStyle.css">
+
+
+<style type="text/css">
+.form-style-10{
+	width:450px;
+	padding:30px;
+	margin:40px auto;
+	background: #FFF;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+}
+.form-style-10 .inner-wrap{
+	padding: 30px;
+	background: #F8F8F8;
+	border-radius: 6px;
+	margin-bottom: 15px;
+}
+.form-style-10 h1{
+	background: #97A97C;
+	padding: 20px 30px 15px 30px;
+	margin: -30px -30px 30px -30px;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+	font: normal 30px 'Bitter', serif;
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 3px solid #718355;
+}
+.form-style-10 h1 > span{
+	display: block;
+	margin-top: 2px;
+	font: 13px Arial, Helvetica, sans-serif;
+}
+.form-style-10 label{
+	display: block;
+	font: 13px Arial, Helvetica, sans-serif;
+	color: #718355;
+	margin-bottom: 15px;
+}
+.form-style-10 input[type="text"],
+.form-style-10 input[type="email"],
+.form-style-10 input[type="password"],
+.form-style-10 textarea,
+.form-style-10 select {
+	box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 45px;
+}
+.form-style-10 input[type="text"]:focus ,
+.form-style-10 input[type="email"]:focus ,
+.form-style-10 input[type="password"]:focus ,
+.form-style-10 input[type="radio"]:focus ,
+.form-style-10 textarea:focus,
+.form-style-10 select:focus{
+border-bottom: 5px solid #B5C99A;
+}
+
+.form-style-10 .section{
+	font: normal 20px 'Bitter', serif;
+	color: #718355;
+	margin-bottom: 5px;
+}
+.form-style-10 .section span {
+	background: #718355;
+	padding: 5px 10px 5px 10px;
+	position: absolute;
+	border-radius: 50%;
+	border: 4px solid #fff;
+	font-size: 14px;
+	margin-left: -45px;
+	color: #fff;
+	margin-top: -3px;
+}
+.form-style-10 input[type="button"], 
+.form-style-10 input[type="submit"]{
+	background: #718355;
+	padding: 8px 20px 8px 20px;
+	border-radius: 5px;
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+	font: normal 30px 'Bitter', serif;
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid #B5C99A;
+	font-size: 15px;
+}
+.form-style-10 input[type="button"]:hover, 
+.form-style-10 input[type="submit"]:hover{
+	background: #CFE1B9;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+}
+.form-style-10 .privacy-policy{
+	float: right;
+	width: 250px;
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #4D4D4D;
+	margin-top: 10px;
+	text-align: right;
+}
+</style>
+
+</head>
+
+<body>
+
+  <header>
+        <nav>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="workout.html">Workout</a></li>   
+        <li><a href="CalculateCalories.html">BMI</a></li>
+        <li><a href="Recipes.html">Recipes</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="Subscription.html">Subscription</a></li>
+        <li><a href="basket.html">Basket</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <section class="getMeals">
+        <h1>Profile</h1>
+    </section>
+    	
+ <form>
+ <fieldset>
+<div class="form-style-10">
+<h1>Sign Up Now!<span>Sign up and reach all site's features!</span></h1>
+<form>
+    <div class="section"><span>1</span>Personal Information</div>
+    <div class="inner-wrap">
+        <label>Your Full Name <input type="text" name="field1" placeholder="Foodicious" required/></label>
+        <label>Address <textarea name="field2"></textarea></label>
+        <label for="gender"> Gender:</label>
+        <label for="male"><input type="radio" name="radioset" id="male" value="male"> Male </label>
+        <label for="female"><input type="radio" name="radioset" id="female" value="female"> Female </label>
+    </div>
+
+    <div class="section"><span>2</span>Email & Phone</div>
+    <div class="inner-wrap">
+        <label>Email Address <input type="email" name="field3" placeholder="foodicious@info.com" required /></label>
+        <label>Phone Number <input type="text" name="field4" placeholder="0110613041292" required/></label>
+    </div>
+
+    <div class="section"><span>3</span>Passwords</div>
+        <div class="inner-wrap">
+        <label>Password <input type="password" name="field5" id="pass1" required/></label>
+        <label>Confirm Password <input type="password" name="field6" id="pass2" required/></label>
+    </div>
+    <div class="button-section">
+     
+    <input type="button" name="Sign Up" value="Sign Up" onclick="chkPasswords()" />
+    
+     <span class="privacy-policy">
+     <input type="checkbox" name="field7" required>You agree to our Terms and Policy. 
+     </span>
+    </div>
+</form>
+</div>	
+  </fieldset>
+    	</form>
+
+<footer>
+    <p>&copy; 2023 Healthy Meals and Products. All rights reserved.</p>
+  </footer>
+
+  <script> 
+	function chkPasswords() {
+    var init = document.getElementById('pass1');
+    var sec = document.getElementById('pass2');
+    if (init.value !== sec.value) {
+        alert("The two passwords are not the same!\nPlease re-enter them");
+    } else {
+        // Change the button type to "submit"
+        document.getElementsByName("Sign Up")[0].type = "submit";
+    }
+}
+
+</script>
+
+</body>
+</html>

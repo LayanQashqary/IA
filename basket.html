@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Basket - Healthy Meals</title>
+    <link rel="stylesheet" href="css/basketStyle.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="workout.html">Workout</a></li>   
+        <li><a href="CalculateCalories.html">BMI</a></li>
+        <li><a href="Recipes.html">Recipes</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="Subscription.html">Subscription</a></li>
+        <li><a href="basket.html">Basket</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+      <h1>My Basket</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Healthy Vegan Meal Plan</td>
+            <td>$50</td>
+            <td>
+              <input type="number"value="1" min="1" max="10" id="meal-quantity" onchange="updateSubtotal('meal')">
+            </td>
+            <td>$50</td>
+          </tr>
+          <tr>
+            <td>Fitness Snack</td>
+            <td>$2</td>
+            <td>
+              <input type="number" value="2" min="1" max="10" id="snack-quantity" onchange="updateSubtotal('snack')">
+            </td>
+            <td>$4</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Total:</td>
+            <td id="total-cost">$54</td>
+          </tr>
+        </tfoot>
+      </table>
+      </section>
+      <br>
+
+      <pre> <p>             ______________________________________________________________________________________________ </p></pre>
+      <br>
+      <section>
+      <h1>Shipping <img src="images\shipping.png"  style="width:5%"></h1>
+      <form>
+        <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone number:</label>
+      <input type="phone" id="phone" name="phone" required>
+
+      <label for="email">Email:</label>
+      <input type = "Email" name="email" id="email" placeholder="yourname@exmaple.com" required="required">
+
+      <label for="city">City:</label>
+      <select id="city" name="city" required>
+        <option value="">Select a city...</option>
+        <option value="Riyadh">Riyadh</option>
+        <option value="Makkah">Makkah</option>
+        <option value="Jeddah">Jeddah</option>
+        <option value="Dammam">Dammam</option>
+        <option value="Yanbu">Yanbu</option>
+        <option value="Madinah">Madinah</option>
+        <option value="Kobar">Kobar</option>
+        <option value="Taif">Taif</option>
+        <option value="Jobail">Jobail</option>
+        <option value="Qaseem">Qaseem</option>
+        <option value="Bahah">Bahah</option>
+        <option value="Abha">Abha</option>
+        <option value="Aseer">Aseer</option>
+        <option value="Hail">Hail</option>
+        <option value="Jazan">Jazan</option>
+        <option value="Najran">Najran</option>
+        <option value="Ahsaa">Ahsaa</option>
+      </select>
+      <button type="submit" id="checkout-btn">Checkout</button>
+
+      </form>
+    </section>
+      
+    </main>
+    <footer>
+    <p>&copy; 2023 Healthy Meals and Products. All rights reserved.</p>
+  </footer>
+    <script src="basket.js"></script>
+  </body>
+</html>
